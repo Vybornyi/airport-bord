@@ -1,0 +1,10 @@
+@mixin large-screen {
+  @media screen and (min-width: $dsk-width) {
+    @content;
+  }
+}
+@mixin tablet-screen {
+  @media screen and (min-width: $tbl-width) {
+    @content;
+  }
+}

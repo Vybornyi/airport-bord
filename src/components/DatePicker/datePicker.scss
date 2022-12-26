@@ -1,0 +1,39 @@
+@import '../../variables.scss';
+@import '../../breakpoints.scss';
+
+.date-picker {
+  display: flex;
+  padding: 5px 10px;
+  margin-top: 40px;
+  background-color: $white-color;
+  position: relative;
+
+  width: 100%;
+  @include large-screen {
+    max-width: 760px;
+  }
+  &__calendar {
+    color: $light-blue-color;
+  }
+  &__selected-date {
+    font-size: 10px;
+    font-weight: 700;
+  }
+  &__form {
+    i {
+      z-index: 0;
+      font-size: 35px;
+      position: relative;
+      background-color: white;
+    }
+  }
+  &__input {
+    font-size: 35px;
+    border: none;
+    position: absolute;
+    width: 45px;
+    opacity: 0;
+    z-index: 1;
+    left: 5px;
+  }
+}

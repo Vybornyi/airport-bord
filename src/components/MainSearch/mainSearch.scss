@@ -1,0 +1,118 @@
+.main-search {
+  height: 80vh;
+  background-image: url(./main.jpg);
+  margin-top: 50px;
+
+  @include tablet-screen {
+    padding: 60px 0;
+  }
+  @include large-screen {
+    margin-top: 92px;
+  }
+  &__title {
+    text-align: left;
+    color: $white-color;
+    font-weight: 300;
+    font-size: 35px;
+    line-height: 40px;
+    opacity: 0.9;
+    @include tablet-screen {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+  .search-block {
+    &__form {
+      display: flex;
+
+      @include tablet-screen {
+        max-width: 660px;
+        margin: auto;
+      }
+      @include large-screen {
+        max-width: 760px;
+      }
+      & i {
+        position: absolute;
+        font-size: 15px;
+        line-height: 45px;
+        color: $grey-color;
+        margin-left: 7px;
+      }
+    }
+    &__input {
+      width: 100%;
+      padding-left: 25px;
+    }
+
+    &__link {
+      padding-left: 5px;
+      font-weight: 700;
+      height: 45px;
+      line-height: 45px;
+      background-color: $light-blue-color;
+      color: $white-color;
+      font-size: 18px;
+      display: block;
+      border-radius: 0 50px 0 0;
+      transition: 0.3s ease-in-out;
+      width: 170px;
+      &:hover {
+        border-radius: 0 10px 0 0;
+      }
+    }
+  }
+  .show-flights {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px 20px 10px;
+    @include tablet-screen {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      max-width: 660px;
+      margin: auto;
+      padding: 20px 0;
+    }
+    @include large-screen {
+      max-width: 760px;
+    }
+    &__button {
+      font-size: 16px;
+      background-color: $white-color;
+      color: $light-blue-color;
+      height: 40px;
+      text-transform: uppercase;
+      margin-top: 10px;
+      min-width: 100%;
+      font-weight: 400;
+      display: flex;
+      align-items: center;
+      transition: 0.3s ease-in-out;
+      opacity: 1;
+      @include tablet-screen {
+        min-width: 270px;
+      }
+      @include large-screen {
+        min-width: 340px;
+      }
+
+      & i {
+        padding: 0 15px;
+      }
+    }
+    &__departures {
+      border-radius: 10px 50px 10px 10px;
+    }
+    &__arrivals {
+      justify-content: end;
+      border-radius: 50px 10px 10px 10px;
+    }
+  }
+  .show-flights__button:hover {
+    background-color: $light-blue-color;
+    color: $white-color;
+    border-radius: 10px 10px 10px 10px;
+  }
+}

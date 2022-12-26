@@ -1,0 +1,74 @@
+@import '../../variables.scss';
+@import '../../breakpoints.scss';
+
+.header {
+  position: fixed;
+  background: $light-blue-color;
+  height: 50px;
+  min-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $white-color;
+  z-index: 999;
+  box-shadow: -1px 5px 10px 1px rgba(0, 0, 0, 0.63);
+
+  @include large-screen {
+    height: 92px;
+    justify-content: end;
+  }
+
+  .navigation {
+    display: none;
+    height: 100%;
+    @include large-screen {
+      display: block;
+    }
+    .navigation-list {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      &__item {
+        height: 100%;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        &-text {
+          height: 100%;
+          padding: 0 35px;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          @include large-screen {
+          }
+        }
+        &_active {
+          color: #008ab7;
+          border-radius: 0 16px 0 0;
+          background: linear-gradient(-90deg, #ffffff 3%, #1eb7ee 100%);
+        }
+      }
+    }
+  }
+  .language-menu__btn {
+    display: none;
+    color: $white-color;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: $light-blue-color;
+    @include large-screen {
+      display: block;
+    }
+  }
+  .navigation-menu-mobile-btn {
+    height: 100%;
+    width: 50px;
+    background-color: $light-blue-color;
+    color: $white-color;
+    @include large-screen {
+      display: none;
+    }
+  }
+}

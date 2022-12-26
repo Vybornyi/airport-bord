@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+@import '../../breakpoints.scss';
+
+table {
+  border: none;
+}
+.flights-list {
+  background-color: $white-color;
+  width: 100%;
+
+  @include large-screen {
+    max-width: 760px;
+  }
+
+  th {
+    height: 40px;
+    color: $grey-color;
+    opacity: 0.5;
+    border: none;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  td {
+    text-align: center;
+    height: 40px;
+    padding: 0;
+  }
+  .airline-info {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    &__logo {
+      width: 60px;
+    }
+    &__name {
+      margin-left: 10px;
+    }
+  }
+}

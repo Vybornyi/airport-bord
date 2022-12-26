@@ -1,0 +1,6 @@
+@import '../../variables.scss';
+@import '../../breakpoints.scss';
+
+tr:nth-child(odd) {
+  background-color: $light-grey-color;
+}
