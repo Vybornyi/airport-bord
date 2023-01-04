@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchForm from '../SearchForm/SearchForm';
-import './SearchResult.scss';
+import './searchResult.scss';
 import ViewFlightsButtons from '../ViewFlightsButtons/ViewFlightsButtons';
 import DatePicker from '../DatePicker/DatePicker';
 import FlightsList from '../FlightsList/FlightsList';
