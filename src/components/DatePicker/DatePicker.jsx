@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
-import './DatePicker.scss';
+import './datePicker.scss';
 import {
   formatDateYYMMD,
   formatDateDMM,
