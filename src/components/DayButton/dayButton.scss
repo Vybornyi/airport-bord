@@ -5,8 +5,9 @@
   &__button {
     background: $white-color;
     color: $grey-color;
-
+    max-width: 120px;
     opacity: 0.5;
+    overflow: hidden;
     &_selected {
       color: $light-blue-color;
       opacity: 1;
