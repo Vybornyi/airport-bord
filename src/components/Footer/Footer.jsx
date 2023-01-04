@@ -4,7 +4,7 @@ import './footer.scss';
 const Footer = () => (
   <footer className="footer">
     <div className="footer-navigation">
-      <div className="navigation-column">
+      <nav className="navigation-column">
         <button className="navigation-column__btn">For passengers</button>
         <ul className="navigation-column__list">
           <li className="navigation-column__list-item">
@@ -33,8 +33,8 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-      </div>
-      <div className="navigation-column">
+      </nav>
+      <nav className="navigation-column">
         <button className="navigation-column__btn">For passengers</button>
         <ul className="navigation-column__list">
           <li className="navigation-column__list-item">
@@ -63,8 +63,8 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-      </div>
-      <div className="navigation-column">
+      </nav>
+      <nav className="navigation-column">
         <button className="navigation-column__btn">For passengers</button>
         <ul className="navigation-column__list">
           <li className="navigation-column__list-item">
@@ -93,8 +93,8 @@ const Footer = () => (
             </a>
           </li>
         </ul>
-      </div>
-      <div className="footer-links">
+      </nav>
+      <nav className="footer-links">
         <div className="contact-us">
           <p className="contact-us__text">Contact us</p>
           <p className="contact-us__number">+380 (044) 500 49 73</p>
@@ -120,7 +120,7 @@ const Footer = () => (
             </a>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
 
     <div className="footer-info">

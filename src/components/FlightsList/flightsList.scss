@@ -11,20 +11,56 @@ table {
   @include large-screen {
     max-width: 760px;
   }
-
+  thead {
+    border-bottom: 0.5px solid rgb(59, 53, 53);
+  }
   th {
-    height: 40px;
+    text-align: center;
+    padding: 8px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: $grey-color;
     opacity: 0.5;
     border: none;
+
     &:hover {
       opacity: 1;
     }
+    @include tablet-screen {
+      max-width: 16%;
+    }
+    @include large-screen {
+      max-width: 16%;
+    }
   }
+  tr {
+    display: flex;
+    flex-wrap: wrap;
+    @include tablet-screen {
+      flex-wrap: nowrap;
+    }
+    &:nth-child(even) {
+      background-color: rgba(65, 64, 63, 0.218);
+    }
+  }
+
   td {
     text-align: center;
-    height: 40px;
-    padding: 0;
+    padding: 8px;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet-screen {
+      max-width: 16%;
+    }
+    @include large-screen {
+      max-width: 16%;
+    }
   }
   .airline-info {
     display: flex;
@@ -35,6 +71,12 @@ table {
     }
     &__name {
       margin-left: 10px;
+      margin: auto;
     }
+  }
+  tbody tr:hover {
+    -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    position: relative;
   }
 }

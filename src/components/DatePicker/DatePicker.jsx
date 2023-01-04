@@ -1,34 +1,35 @@
 import React, { useState } from 'react';
-import { NavLink, useSearchParams } from 'react-router-dom';
+import { useSearchParams, useLocation } from 'react-router-dom';
 import './DatePicker.scss';
 import {
   formatDateYYMMD,
-  formatDateDMMYY,
   formatDateDMM,
   getPrevDay,
   getNextDay,
+  getQueryParams,
 } from '../../utils/utils';
 import DayButton from '../DayButton/DayButton';
 
 const DatePicker = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const searchQueryParam = searchParams.get('search') || '';
-  const dataQueryParam = searchParams.get('date') || '';
-  const [selectedDate, onChangeSelectedDate] = useState(dataQueryParam);
+  const location = useLocation();
+
+  const { date, search } = getQueryParams(location);
+  const [selectedDate, onChangeSelectedDate] = useState(date);
 
   const onChangeDateInput = e => {
     onChangeSelectedDate(formatDateYYMMD(e.target.value));
     setSearchParams({
-      search: searchQueryParam,
+      search,
       date: formatDateYYMMD(e.target.value),
     });
   };
-  const handleDaysNavigation = date => {
+  const handleDaysNavigation = dateOfWeek => {
     setSearchParams({
-      search: searchQueryParam,
-      date,
+      search,
+      date: dateOfWeek,
     });
-    onChangeSelectedDate(date);
+    onChangeSelectedDate(dateOfWeek);
   };
   return (
     <div className="date-picker">

@@ -1,25 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './flightsList.scss';
+import Spinner from 'react-bootstrap/Spinner';
+import 'bootstrap/dist/css/bootstrap.css';
 import { useGetFlightsListQuery } from '../../redux/flightsAPI';
-import { formatDateYYMMD, getFlightsList, getFlightsFilteredList } from '../../utils/utils';
+import { getFlightsFilteredList, getQueryParams } from '../../utils/utils';
 import Flight from '../Flight/Flight';
+import NoFlights from '../NoFlights';
 
 const HEADER_CELS = ['Terminal', 'Local Time', 'Destination', 'Status', 'Airline', 'Flight'];
 
 const FlightsList = () => {
   const location = useLocation();
-  const urlParams = new URLSearchParams(location.search);
-  const { date } = Object.fromEntries(urlParams);
+  const { date } = getQueryParams(location);
 
   const { data = [], isFetching } = useGetFlightsListQuery(date);
 
-  const flightsList = getFlightsList(data.body, location);
-
-  const flightsFilteredList = getFlightsFilteredList(flightsList, location);
+  const flightsFilteredList = getFlightsFilteredList(data.body, location);
 
   if (isFetching) {
-    return 'Fetching now';
+    return (
+      <Spinner
+        style={{ width: '34px', height: '34px', marginTop: '25px' }}
+        animation="border"
+        variant="primary"
+      />
+    );
+  }
+  if (flightsFilteredList.length === 0) {
+    return <NoFlights />;
   }
   return (
     <>

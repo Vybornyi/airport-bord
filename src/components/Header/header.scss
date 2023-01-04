@@ -16,6 +16,10 @@
     height: 92px;
     justify-content: end;
   }
+  .logo {
+    height: 80%;
+    margin: 5%;
+  }
 
   .navigation {
     display: none;
@@ -42,7 +46,7 @@
           @include large-screen {
           }
         }
-        &_active {
+        &:hover {
           color: #008ab7;
           border-radius: 0 16px 0 0;
           background: linear-gradient(-90deg, #ffffff 3%, #1eb7ee 100%);

@@ -1,7 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { getTime } from '../../utils/utils';
-import './flight.scss';
 
 const Flight = flight => {
   const location = useLocation();

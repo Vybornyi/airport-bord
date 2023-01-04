@@ -1,34 +1,46 @@
 import React from 'react';
-import { Navigate, NavLink, useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './viewFlightsButtons.scss';
 
 const ViewFlightsButtons = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const isDeparture = location.pathname === '/departures';
 
   return (
     <div className="view-flights">
-      <NavLink
-        to={`departures${location.search}`}
-        className={({ isActive }) =>
-          isActive
+      <button
+        onClick={() => {
+          navigate({
+            pathname: '/departures',
+            search: location.search,
+          });
+        }}
+        className={
+          isDeparture
             ? 'view-flights__button view-flights__button_active view-flights__departures'
             : 'view-flights__button view-flights__departures'
         }
       >
         <i className="fa-sharp fa-solid fa-plane-departure"></i>
         departures
-      </NavLink>
-      <NavLink
-        to={`arrivals${location.search}`}
-        className={({ isActive }) =>
-          isActive
+      </button>
+      <button
+        onClick={() => {
+          navigate({
+            pathname: '/arrivals',
+            search: location.search,
+          });
+        }}
+        className={
+          !isDeparture
             ? 'view-flights__button_active view-flights__button view-flights__arrivals'
             : 'view-flights__button view-flights__arrivals'
         }
       >
         arrivals
         <i className="fa-solid fa-plane-arrival"></i>
-      </NavLink>
+      </button>
     </div>
   );
 };
