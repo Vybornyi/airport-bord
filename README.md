@@ -1,6 +1,6 @@
 # airport-bord
 
-https://rococo-beijinho-6641b8.netlify.app/
+## Here the [LINK](https://rococo-beijinho-6641b8.netlify.app/)
 
 The tech stack is:
 
@@ -12,7 +12,7 @@ The tech stack is:
 - JavaScript ES 6
 - React 18
 - React Router
-- -Webpack
+- Webpack
 - Node Package Manager
 - REST API
 - Redux Toolkit/RTK Query
