@@ -4,18 +4,18 @@ https://rococo-beijinho-6641b8.netlify.app/
 
 The tech stack is:
 
-HTML5
-CSS3
-FlexBox
-Sass(Scss)
-BEM Methodology
-JavaScript ES 6
-React 18
-React Router
-Webpack
-Node Package Manager
-REST API
-Redux Toolkit/RTK Query
+- CSS3
+- HTML5
+- FlexBox
+- Sass(Scss)
+- BEM Methodology
+- JavaScript ES 6
+- React 18
+- React Router
+- -Webpack
+- Node Package Manager
+- REST API
+- Redux Toolkit/RTK Query
 
 Available Scripts
 In the project directory, you can run:
