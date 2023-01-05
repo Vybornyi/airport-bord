@@ -19,16 +19,12 @@ const DatePicker = () => {
 
   const onChangeDateInput = e => {
     onChangeSelectedDate(formatDateYYMMD(e.target.value));
-    setSearchParams({
-      search,
-      date: formatDateYYMMD(e.target.value),
-    });
+    searchParams.set('date', formatDateYYMMD(e.target.value));
+    setSearchParams(searchParams);
   };
   const handleDaysNavigation = dateOfWeek => {
-    setSearchParams({
-      search,
-      date: dateOfWeek,
-    });
+    searchParams.set('date', dateOfWeek);
+    setSearchParams(searchParams);
     onChangeSelectedDate(dateOfWeek);
   };
   return (

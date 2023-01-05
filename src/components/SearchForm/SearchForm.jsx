@@ -4,23 +4,21 @@ import './searchForm.scss';
 import { getQueryParams } from '../../utils/utils';
 
 const SearchForm = () => {
-  const [, setSearchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
   const { date, search } = getQueryParams(location);
   const [inputValue, setInputValue] = useState(search || '');
 
   const onChange = e => {
-    setInputValue(e.target.value);
-    if (e.target.value) {
-      setSearchParams({
-        date,
-        search: e.target.value,
-      });
+    const { value } = e.target;
+    setInputValue(value);
+
+    if (value) {
+      searchParams.set('search', value);
     } else {
-      setSearchParams({
-        date,
-      });
+      searchParams.delete('search');
     }
+    setSearchParams(searchParams);
   };
 
   return (
