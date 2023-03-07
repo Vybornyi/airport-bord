@@ -14,11 +14,12 @@
 
   @include large-screen {
     height: 92px;
-    justify-content: end;
+    justify-content: space-between;
   }
   .logo {
     height: 80%;
     margin: 5%;
+    margin-left: 50px;
   }
 
   .navigation {

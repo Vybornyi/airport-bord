@@ -7,6 +7,7 @@ const Header = () => (
     <Link to="/">
       <img className="logo" src="https://www.linkpicture.com/q/logo_1.png" alt="Logo" />
     </Link>
+    <div className="navigation-wrapper"></div>
     <nav className="navigation">
       <ul className="navigation-list">
         <li className="navigation-list__item">

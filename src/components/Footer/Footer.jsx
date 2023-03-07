@@ -35,61 +35,61 @@ const Footer = () => (
         </ul>
       </nav>
       <nav className="navigation-column">
-        <button className="navigation-column__btn">For passengers</button>
+        <button className="navigation-column__btn">Corporate</button>
         <ul className="navigation-column__list">
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Flight schedule
+              Main page
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Services
+              Ground Handling
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Contacts
+              Airport characteristics
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Privacy policy
+              Education Center
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Feedback form
+              Careers
             </a>
           </li>
         </ul>
       </nav>
       <nav className="navigation-column">
-        <button className="navigation-column__btn">For passengers</button>
+        <button className="navigation-column__btn">Press centre</button>
         <ul className="navigation-column__list">
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Flight schedule
+              Main page
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Services
+              Latest news
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Contacts
+              Social & Art Projects
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Privacy policy
+              Financial reports
             </a>
           </li>
           <li className="navigation-column__list-item">
             <a href="#" className="list-item__link">
-              Feedback form
+              Traffic statistics
             </a>
           </li>
         </ul>
