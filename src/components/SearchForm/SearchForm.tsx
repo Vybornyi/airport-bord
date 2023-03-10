@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { useSearchParams, useLocation } from 'react-router-dom';
 import './searchForm.scss';
-import { getQueryParams } from '../../utils/utils';
+import { getQueryParams } from '../../common/utils/utils';
 
-const SearchForm = () => {
+const SearchForm: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  const { date, search } = getQueryParams(location);
-  const [inputValue, setInputValue] = useState(search || '');
+  const { search } = getQueryParams(location.search);
 
-  const onChange = e => {
+  const [inputValue, setInputValue] = React.useState(search || '');
+
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = e.target;
     setInputValue(value);
 

@@ -1,22 +1,19 @@
-import React from 'react';
+import * as React from 'react';
 import { useLocation } from 'react-router-dom';
 import './flightsList.scss';
 import Spinner from 'react-bootstrap/Spinner';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useGetFlightsListQuery } from '../../redux/flightsAPI';
-import { getFlightsFilteredList, getQueryParams } from '../../utils/utils';
+import { getFlightsFilteredList, getQueryParams } from '../../common/utils/utils';
 import Flight from '../Flight/Flight';
 import NoFlights from '../NoFlights';
-
-const HEADER_CELS = ['Terminal', 'Local Time', 'Destination', 'Status', 'Airline', 'Flight'];
+import { HEADER_CELS } from '../../common/data/headerCels';
 
 const FlightsList = () => {
   const location = useLocation();
-  const { date } = getQueryParams(location);
+  const { date } = getQueryParams(location.search);
 
-  const { data = [], isFetching } = useGetFlightsListQuery(date);
-
-  const flightsFilteredList = getFlightsFilteredList(data.body, location);
+  const { data, isFetching } = useGetFlightsListQuery(date);
 
   if (isFetching) {
     return (
@@ -27,6 +24,8 @@ const FlightsList = () => {
       />
     );
   }
+  const flightsFilteredList = getFlightsFilteredList(data.body, location);
+
   if (flightsFilteredList.length === 0) {
     return <NoFlights />;
   }
@@ -43,7 +42,7 @@ const FlightsList = () => {
           </tr>
         </thead>
         <tbody>
-          {flightsFilteredList.map(flight => (
+          {flightsFilteredList.map((flight: any) => (
             <Flight key={flight.id} {...flight} />
           ))}
         </tbody>

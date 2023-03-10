@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import './viewFlightsButtons.scss';
 
-const ViewFlightsButtons = () => {
+const ViewFlightsButtons: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const isDeparture = location.pathname === '/departures';

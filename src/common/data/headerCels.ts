@@ -1,0 +1,1 @@
+export const HEADER_CELS = ['Terminal', 'Local Time', 'Destination', 'Status', 'Airline', 'Flight'];

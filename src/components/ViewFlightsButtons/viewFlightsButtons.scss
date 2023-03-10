@@ -24,7 +24,6 @@
     align-items: center;
     overflow: hidden;
     opacity: 0.8;
-    padding-left: 20px;
 
     &:hover {
       opacity: 1;
@@ -37,7 +36,10 @@
     }
 
     & i {
-      padding: 0 15px;
+      margin: 0 15px;
+      @include tablet-screen {
+        margin: 35px;
+      }
     }
   }
   &__departures {

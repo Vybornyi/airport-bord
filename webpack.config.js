@@ -7,12 +7,17 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production';
   const config = {
-    entry: './src/index.jsx',
+    entry: './src/index.tsx',
     output: {
       filename: 'bundle.js',
     },
     module: {
       rules: [
+        {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          use: 'ts-loader',
+        },
         {
           test: /.(js|jsx?)$/,
           exclude: /node_modules/,
@@ -34,7 +39,7 @@ module.exports = (env, argv) => {
       ],
     },
     resolve: {
-      extensions: ['.js', '.jsx'],
+      extensions: ['.tsx', '.ts', '.js'],
     },
     plugins: [
       new webpack.ProgressPlugin(),

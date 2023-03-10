@@ -1,8 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 import { useLocation } from 'react-router-dom';
-import { getTime } from '../../utils/utils';
+import { getTime } from '../../common/utils/utils';
+import type { Flight } from '../../entities/Flight';
 
-const Flight = flight => {
+const Flight: React.FC = (flight: Flight) => {
   const location = useLocation();
   const {
     terminal,
