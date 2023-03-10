@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+@import '../../styles/breakpoints.scss';
+
+.notification {
+  background-color: #ff0000eb;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  text-align: center;
+  color: #e9ecef;
+  font-size: 11px;
+
+  @include tablet-screen {
+    font-size: 14px;
+  }
+  @include large-screen {
+    font-size: 16px;
+    top: 92px;
+  }
+}

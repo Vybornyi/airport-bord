@@ -4,18 +4,18 @@
 
 The tech stack is:
 
+- TypeScript
+- JavaScript ES 6
+- React 18
+- Redux Toolkit/RTK Query
+- React Router
 - CSS3
 - HTML5
 - FlexBox
 - Sass(Scss)
 - BEM Methodology
-- JavaScript ES 6
-- React 18
-- React Router
 - Webpack
 - Node Package Manager
-- REST API
-- Redux Toolkit/RTK Query
 
 Available Scripts
 In the project directory, you can run:
