@@ -24,7 +24,7 @@ const FlightsList = () => {
       />
     );
   }
-  const flightsFilteredList = getFlightsFilteredList(data.body, location);
+  const flightsFilteredList = data ? getFlightsFilteredList(data.body, location) : [];
 
   if (flightsFilteredList.length === 0) {
     return <NoFlights />;
@@ -42,7 +42,7 @@ const FlightsList = () => {
           </tr>
         </thead>
         <tbody>
-          {flightsFilteredList.map((flight: any) => (
+          {flightsFilteredList.map(flight => (
             <Flight key={flight.id} {...flight} />
           ))}
         </tbody>
