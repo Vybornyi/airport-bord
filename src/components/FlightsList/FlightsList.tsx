@@ -24,7 +24,7 @@ const FlightsList = () => {
       />
     );
   }
-  const flightsFilteredList = getFlightsFilteredList(data.body, location);
+  const flightsFilteredList = data ? getFlightsFilteredList(data.body, location) : [];
 
   if (flightsFilteredList.length === 0) {
     return <NoFlights />;
