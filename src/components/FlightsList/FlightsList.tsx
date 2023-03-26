@@ -42,7 +42,7 @@ const FlightsList = () => {
           </tr>
         </thead>
         <tbody>
-          {flightsFilteredList.map((flight: any) => (
+          {flightsFilteredList.map(flight => (
             <Flight key={flight.id} {...flight} />
           ))}
         </tbody>
