@@ -6,6 +6,7 @@
     background: $white-color;
     color: $grey-color;
     max-width: 120px;
+    min-width: 100px;
     opacity: 0.5;
     overflow: hidden;
     &_selected {
