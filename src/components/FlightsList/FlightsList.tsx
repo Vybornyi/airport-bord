@@ -13,7 +13,11 @@ const FlightsList = () => {
   const location = useLocation();
   const { date } = getQueryParams(location.search);
 
-  const { data, isFetching } = useGetFlightsListQuery(date);
+  const { data, isFetching, isError } = useGetFlightsListQuery(date);
+
+  if (isError) {
+    return <h2 style={{ color: 'red', marginTop: '25px' }}>Internal Server Error !!!</h2>;
+  }
 
   if (isFetching) {
     return (
@@ -24,7 +28,7 @@ const FlightsList = () => {
       />
     );
   }
-  const flightsFilteredList = getFlightsFilteredList(data.body, location);
+  const flightsFilteredList = getFlightsFilteredList(data?.body, location);
 
   if (flightsFilteredList.length === 0) {
     return <NoFlights />;
