@@ -2,8 +2,6 @@
 
 ## Here the [LINK](https://rococo-beijinho-6641b8.netlify.app/)
 
-### Unfortunately, there is currently an issue with the API, but I am working on switching to another one.
-
 The tech stack is:
 
 - TypeScript
